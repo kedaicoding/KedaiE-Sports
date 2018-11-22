@@ -21,4 +21,10 @@ class RoostersController < ApplicationController
 
   private
 
+  def roosters_params
+    params
+    .require(:teams)
+    .permit(:nama_team, :logo_team, :alamat, :game , :email, :manajer, roosters_attributes: Rooster.attribute_names.map(&:to_sym).push(:_destroy))    
+  end
+  
 end
