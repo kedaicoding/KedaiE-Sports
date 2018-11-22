@@ -8,6 +8,11 @@ class RoostersController < ApplicationController
   def edit
   end
 
+  def new
+    @rooster = Rooster.new
+  end
+  
+
   def update
   end
 
