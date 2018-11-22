@@ -1,3 +1,0 @@
-class Roster < ApplicationRecord
-    
-end

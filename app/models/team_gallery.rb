@@ -1,0 +1,3 @@
+class TeamGallery < ApplicationRecord
+    
+end

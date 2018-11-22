@@ -1,5 +1,5 @@
 class CreateCoaches < ActiveRecord::Migration[5.2]
-  def change
+  def up
     create_table :coaches do |t|
       t.string :nama, null: false, limit: 35 
       t.string :foto
@@ -13,4 +13,9 @@ class CreateCoaches < ActiveRecord::Migration[5.2]
       t.timestamps
     end
   end
+
+  def down
+    drop_table :coaches
+  end
+  
 end

@@ -1,5 +1,5 @@
 class CreateTeams < ActiveRecord::Migration[5.2]
-  def change
+  def up
     create_table :teams do |t|
       t.string :nama_team, null: false, limit: 25
       t.string :logo_team
@@ -11,4 +11,10 @@ class CreateTeams < ActiveRecord::Migration[5.2]
       t.timestamps
     end
   end
+
+  def down
+    drop_table :teams 
+  end
+  
+
 end
